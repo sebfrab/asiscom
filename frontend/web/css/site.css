@@ -1,0 +1,310 @@
+@font-face {
+    font-family: 'PT Serif';
+    src: url('../fonts/PT_Serif-Web-Regular.ttf');
+}
+@font-face {
+    font-family: 'PT Serif B';
+    src: url('../fonts/PT_Serif-Web-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Bold.ttf');
+}
+
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.title-slide{
+    font-family: 'PT Serif', sans-serif !important;
+    text-transform: uppercase;
+}
+
+.sub-title-slide{
+    font-family: 'Open Sans', sans-serif !important;
+    font-style: italic;
+    font-size: 26px !important;
+}
+    
+
+
+
+
+
+.dorado{
+    color: #bf9e58 !important;
+}
+
+
+
+.navbar-nav > li > a {
+    color: #fff !important;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #bf9e58 !important;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  /*color: #000 !important;*/
+  background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out; 
+    }
+                
+    .top-nav-collapse {
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 0px solid #f83c3c !important;
+    }
+
+    
+    .top-nav-collapse  ul > li a {
+        color: #484848 !important;
+    }
+
+    .nav-superior-transparent{
+        background-color: transparent !important;
+    }
+
+    .nav-superior-black{
+        background-color: #1f1f1f !important;
+    }   
+}
+
+
+.gray{
+    background-color: #f6f4f4;
+}
+
+.areas h2{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-family: "Raleway",sans-serif !important;
+    text-align: center
+}
+
+.areas h3{
+    color: #727272;
+    font-family: "PT Serif",sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 21px;
+    margin-bottom: 8px;
+    text-align: center
+}
+
+
+#areas{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-right: 0px !important;
+}
+
+.servicio{
+    height: 150px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+}
+
+.servicio a{
+    text-decoration: none;
+}
+
+.servicio > a > p{
+    text-align: justify !important;
+    color: #878787 !important;
+    line-height: 24px;
+}
+
+.servicio a > p > b{
+    color: #3e3e3e;
+}
+
+
+footer{
+    background-color: #1f1f1f;
+    color: #636363;
+    padding-top: 30px;
+    font-size: 16px;
+    padding-bottom: 30px;
+}
+
+footer a{
+    color: #636363;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #bf9e58;
+}
+
+footer h1{
+    font-family: 'PT Serif', sans-serif !important;
+    border-bottom: 1px solid #363637;
+    font-style: italic;
+    font-size: 18px;
+    color: #ffffff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+footer h2{
+    font-family: 'PT Serif', sans-serif !important;
+    font-style: italic;
+    font-size: 14px;
+    color: #ffffff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #bf9e58;
+    font-weight: bold;
+}
+
+#facebook:hover{
+    content: url('../images/facebook_hover.png');
+}
+
+#testimonio{
+    background-image: url('../images/testimonio.jpg');
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-right: 0px !important;
+}
+
+#testimonio p{
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+#testimonio p>label{
+    margin-top: 5px;
+    color: #bf9e58;
+    font-style: italic;
+}
+
+#testimonio p>label>span{
+    font-size: 14px;
+}
+
+#testimonio img{
+    width: 90px !important;
+}
+
+#testimonio h2{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-family: "Raleway",sans-serif !important;
+    text-align: center;
+    color: #bf9e58;
+}
+
+#testimonio h3{
+    color: #727272;
+    font-family: "PT Serif",sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 21px;
+    margin-bottom: 8px;
+    text-align: center
+}
+
+#nosotros{
+    margin-right: 0px !important;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#nosotros h2{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-family: "Raleway",sans-serif !important;
+    text-align: center
+}
+
+#nosotros h3{
+    color: #727272;
+    font-family: "PT Serif",sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 21px;
+    margin-bottom: 8px;
+    text-align: center
+}
+
+#nosotros p{
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    color: #878787;
+    line-height: 24px;
+}
+
+#nosotros a{
+    color: #bf9e58;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+    font-style: italic;
+}
+
+#nosotros a:hover{
+    text-decoration: underline;
+}
+
+#contacto{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #3e3e3e;
+}
+
+#mapa{
+    height: 300px;
+}

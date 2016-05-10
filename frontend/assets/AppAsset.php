@@ -28,6 +28,7 @@ class AppAsset extends AssetBundle
         'js/main.js',
         'owl-carousel/owl.carousel.min.js',
         'js/scrolling-nav.js',
+        'js/maps.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

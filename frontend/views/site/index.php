@@ -69,16 +69,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-8">
+                    
                     <p>
-                        Empresa orientada a entregar servicios integrales a Empresas, 
-                        e instituciones, en Asesorías y Asistencias en <b>GESTIONES JUDICIALES Y 
-                        EXTRA JUDICIALES, GESTIONES COMERCIALES, FINANCIERAS, TRIBUTARIAS</b>.<br/><br/>
-                        Contamos con un equipo de trabajo compuesto por Profesionales 
-                        universitarios y personal de apoyo técnico, como procuradores, 
-                        asesores y apoyo tecnológico. <br/><br/>
-                        Nuestro Estudio Jurídico Financiero y “Centro de Orientación y 
-                        Gestión para Microempresa”, ofrece a las diferentes Empresas 
-                        de la zona todos los servicios en las áreas antes mencionados.
+                        <?= $nuestro_estudio->dato ?>
                     </p>
                     <p style="text-align: right;"><a href="#">leer más >></a></p>
                 </div>
@@ -149,25 +142,59 @@
 </div>
 <?php // </editor-fold> ?>
 
+<?php // <editor-fold defaultstate="collapsed" desc="Empresas"> ?>
+<div class="row" id="clientes">
+    <div class="col-lg-12">
+        <h3>empresas</h3>
+        <h2>CLIENTES</h2>
+    </div>
+    <div class="col-lg-12">
+        <div class="container">
+            <div class="row">
+                <?php
+                    if(!is_null($clientes)){
+                        foreach($clientes as $cliente){
+                ?>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <a href="#">
+                        <image class="img-responsive col-lg-12 center-block" src="<?php Yii::$app->homeUrl?>/images/cliente/<?= $cliente->idcliente ?>.jpg" />
+                        <h3 class="dorado col-lg-12"><?= $cliente->nombre; ?></h3>
+                    </a>
+                </div>
+
+
+                <?php
+                    }}
+                ?>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<?php // </editor-fold> ?>
+
 <?php // <editor-fold defaultstate="collapsed" desc="Contacto"> ?>
 <div class="row gray" id="contacto">
-    <div class="col-lg-6">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <h2 class="dorado" style="text-align: center">Contáctenos</h2><br/><br/>
         <?=
             $this->render('_contact', [
                 'model' => $model,
             ]);
         ?>
     </div>
-    <div class="col-lg-6">
-        
-    </div>
+    <div class="col-lg-2"></div>
 </div>
 <?php // </editor-fold> ?>
 
 <?php // <editor-fold defaultstate="collapsed" desc="Maps"> ?>
-<div class="row">
-    <div class="col-lg-12">
+<div class="row embed-container maps" id="mapa">
+    <div class="col-lg-12" style="padding-right: 0px;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.553449626768!2d-71.62707868499764!3d-33.0418932840458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e12947020d77%3A0xe90c16014056767b!2sEsmeralda+1072%2C+Valpara%C3%ADso%2C+Regi%C3%B3n+de+Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1462299866625" frameborder="0" height="300" width="100%"></iframe>
     </div>
 </div>
 <?php // </editor-fold> ?>
+
+
+

@@ -28,7 +28,7 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-    $url = "./images/logo-2.png";
+    $url = Yii::$app->homeUrl."images/logo-small-asiccom.png";
     NavBar::begin([
         'brandLabel' => '<img id="img-superior" src="'.$url.'">',
         'brandOptions' => ['style' => 'margin-top: -20px;'],
@@ -36,13 +36,14 @@ AppAsset::register($this);
         'options' => [
             'class' => 'navbar navbar-default navbar-fixed-top nav-superior-transparent',
             'id' => 'menu-principal',
+            'title' => 'ASISCOM CHILE'
         ],
     ]);
     
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Nuestro Estudio', 'url' => ['/site/about']],
-        ['label' => 'Abogados', 'url' => ['/site/about']],
+        ['label' => 'Abogados', 'url' => ['/site/abogados']],
         ['label' => 'Áreas de práctica', 'url' => ['/site/about']],
         ['label' => 'Blog', 'url' => 'http://asiscomchilelimitada.blogspot.cl/', 
             'linkOptions' => ['target' => '_blank']],
@@ -56,10 +57,28 @@ AppAsset::register($this);
     ?>
 
     <div class="container-fluid" style="padding: 0px;">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
+        
+            <?php
+            $controller = Yii::$app->controller;
+            $default_controller = Yii::$app->defaultRoute;
+            $isHome = (($controller->id === $default_controller) && ($controller->action->id === $controller->defaultAction)) ? true : false;
+            ?>
+            
+            
+            <?php
+                if(!$isHome){
+                echo "<div class='jumbotron' id='jumbotron'>";
+                    $menu = $this->params['breadcrumbs'];
+                    $titulo = array_pop($menu);
+                    echo "<h1>".$titulo."</h1>";
+                    echo Breadcrumbs::widget([
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                    ]); 
+                    
+                    echo Alert::widget();
+                echo "</div>";
+                }?>
+        
         <?= $content ?>
     </div>
 </div>

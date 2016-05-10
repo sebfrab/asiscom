@@ -10,6 +10,7 @@ use Yii;
  * @property integer $idestado
  * @property string $nombre
  *
+ * @property Clientes[] $clientes
  * @property Testimonio[] $testimonios
  */
 class Estado extends \yii\db\ActiveRecord
@@ -43,6 +44,14 @@ class Estado extends \yii\db\ActiveRecord
             'idestado' => 'Idestado',
             'nombre' => 'Nombre',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getClientes()
+    {
+        return $this->hasMany(Clientes::className(), ['estado_idestado' => 'idestado']);
     }
 
     /**

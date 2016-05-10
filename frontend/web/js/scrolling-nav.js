@@ -4,12 +4,12 @@ $(window).scroll(function() {
         if ($(".navbar").offset().top > 100) {
             $(".navbar-fixed-top").addClass("top-nav-collapse");
             $(".navbar-fixed-top").addClass("nav-superior-black");
-            $("#img-superior").attr("src", "../images/logo-2.png");
+            $("#img-superior").attr("src", "../images/logo-small-asiccom.png");
         } else {
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
             $(".navbar-fixed-top").addClass("nav-superior-transparent");
             $(".navbar-fixed-top").removeClass("nav-superior-black");
-            $("#img-superior").attr("src", "../images/logo-2.png");
+            $("#img-superior").attr("src", "../images/logo-small-asiccom.png");
         }
     }
 });
@@ -32,7 +32,7 @@ if ($(window).width() < 768){
 $(window).on('resize', function(){
     if ($(window).width() < 768){
         $(".navbar-fixed-top").addClass("nav-superior-black");
-        $("#img-superior").attr("src", "../images/logo-2.png");
+        $("#img-superior").attr("src", "../images/logo-small-asiccom.png");
         $(".navbar-fixed-top").addClass("menu-collapse-site");
     }else{
         $(".navbar-fixed-top").removeClass("menu-collapse-site");
@@ -40,12 +40,12 @@ $(window).on('resize', function(){
             if ($(".navbar").offset().top > 100) {
                 $(".navbar-fixed-top").addClass("top-nav-collapse");
                 $(".navbar-fixed-top").addClass("nav-superior-black");
-                $("#img-superior").attr("src", "../images/logo-2.png");
+                $("#img-superior").attr("src", "../images/logo-small-asiccom.png");
             } else {
                 $(".navbar-fixed-top").removeClass("top-nav-collapse");
                 $(".navbar-fixed-top").addClass("nav-superior-transparent");
                 $(".navbar-fixed-top").removeClass("nav-superior-black");
-                $("#img-superior").attr("src", "../images/logo-2.png");
+                $("#img-superior").attr("src", "../images/logo-small-asiccom.png");
             }
         }
     }

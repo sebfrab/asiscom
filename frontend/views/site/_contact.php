@@ -11,7 +11,7 @@ use yii\captcha\Captcha;
 ?>
 <div class="site-contact">
 
-    <div class="row">
+    <div class="row" style="margin-right: 0px;">
         <div class="col-lg-12">
             <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
                 

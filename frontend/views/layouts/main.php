@@ -44,10 +44,10 @@ AppAsset::register($this);
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'Nuestro Estudio', 'url' => ['/site/about']],
         ['label' => 'Abogados', 'url' => ['/site/abogados']],
-        ['label' => 'Áreas de práctica', 'url' => ['/site/about']],
+        ['label' => 'Áreas de práctica', 'url' => ['/site/areas']],
         ['label' => 'Blog', 'url' => 'http://asiscomchilelimitada.blogspot.cl/', 
             'linkOptions' => ['target' => '_blank']],
-        ['label' => 'Contacto', 'url' => ['/site/contact']],
+        ['label' => 'Contacto', 'url' => ['/site/index', '#'=>'contacto']],
     ];
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

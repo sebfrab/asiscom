@@ -88,13 +88,29 @@ class SiteController extends Controller
                 one();
         
         $model = new ContactForm();
-        return $this->render('index', [
-            'servicios' => $servicios,
-            'testimonio' => $testimonio,
-            'clientes' => $clientes,
-            'model' => $model,
-            'nuestro_estudio' => $nuestro_estudio,
-        ]);
+
+        
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+                Yii::$app->session->setFlash('success', 'Gracias por contactarnos. '
+                        . 'Nosotros responderemos a la mayor brevedad posible.');
+            } else {
+                Yii::$app->session->setFlash('error', 'Se ha producido un error '
+                        . 'al realizar el envío de correo electrónico.');
+            }
+
+            $this->redirect(Yii::$app->urlManager->createUrl(["site/index","#"=>"contacto"]));
+        } else {
+            return $this->render('index', [
+                'servicios' => $servicios,
+                'testimonio' => $testimonio,
+                'clientes' => $clientes,
+                'model' => $model,
+                'nuestro_estudio' => $nuestro_estudio,
+            ]);
+        }
+        
+        
     }
  
     public function actionContact()
@@ -102,14 +118,16 @@ class SiteController extends Controller
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
-                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
+                Yii::$app->session->setFlash('success', 'Gracias por contactarnos. '
+                        . 'Nosotros responderemos a la mayor brevedad posible.');
             } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending email.');
+                Yii::$app->session->setFlash('error', 'Se ha producido un error '
+                        . 'al realizar el envío de correo electrónico.');
             }
 
-            return $this->refresh();
+            $this->redirect(Yii::$app->urlManager->createUrl(["site/index","#"=>"contacto"]));
         } else {
-            return $this->render('_contact', [
+            return $this->render('contacto', [
                 'model' => $model,
             ]);
         }
@@ -144,6 +162,15 @@ class SiteController extends Controller
                 all();
         return $this->render('abogados',[
             'abogados' => $abogados
+        ]);
+    }
+    
+    public function actionAreas()
+    {
+        $servicio = Servicio::find()->
+                all();
+        return $this->render('areas',[
+            'areas' => $servicio
         ]);
     }
 

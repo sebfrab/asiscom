@@ -1,6 +1,5 @@
 <?php
     use yii\helpers\Html;
-    use yii\bootstrap\ActiveForm;
 
     $this->title = 'Nuestro Estudio';
     $this->params['breadcrumbs'][] = $this->title;

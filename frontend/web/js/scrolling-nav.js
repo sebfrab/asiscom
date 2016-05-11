@@ -26,7 +26,7 @@ $(function() {
 });
 if ($(window).width() < 768){
         $(".navbar-fixed-top").addClass("nav-superior-black");
-        $("#img-superior").attr("src", "../images/logo-2.png");   
+        $("#img-superior").attr("src", "../images/logo-small-asiccom.png");   
         $(".navbar-fixed-top").addClass("menu-collapse-site");
     }
 $(window).on('resize', function(){

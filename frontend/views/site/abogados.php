@@ -23,12 +23,13 @@
                     ?>
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 abogado">
                                 <div class="gray" style="padding-bottom: 5px;">
-                                    <image class="img-responsive" src="<?php Yii::$app->homeUrl?>/images/abogados/0.jpg" />
+                                    <image class="img-responsive" style="width: 100%;"
+                                           src="<?php Yii::$app->homeUrl?>/images/abogados/<?= $abogado->idabogado ?>.jpg" />
                                     <div style="margin-top: 20px;">
-                                        <h4><?= $abogado->nombres." ".$abogado->apellidos ?></h4>
+                                        <h4 class="abogado_nombre"><?= $abogado->nombres." ".$abogado->apellidos ?></h4>
                                         <br/>
-                                        <h4>Areas de práctica</h4>
-                                        <p style="height: 50px;">
+                                        <h4 class="abogado_areas">Areas de práctica</h4>
+                                        <p style="height: 50px;" class="abogado_areas_detalle"> 
                                         <?php
                                             foreach($abogado->abogadoServicios as $servicio_abogado){
                                         ?>
@@ -37,9 +38,9 @@
                                             }
                                         ?>
                                         </p>   
-                                        <div style="padding: 5px;">
-                                            <div style="background-color: #fff; padding-bottom: 5px; padding-top: 15px;">
-                                                <p>
+                                        <div style="padding: 10px;">
+                                            <div class="abogado_contenedor_contacto">
+                                                <p class="abogado_contacto">
                                                     Contacto: <?= $abogado->contacto?>
                                                 </p>    
                                             </div>

@@ -139,6 +139,18 @@ h6 {
     margin-right: 0px !important;
 }
 
+#areas .link{
+    color: #bf9e58;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+    font-style: italic;
+}
+
+#areas .link:hover{
+    text-decoration: underline;
+}
+
 .servicio{
     height: 150px;
     padding: 5px;
@@ -314,6 +326,7 @@ footer h2{
 #mapa{
     margin-right: 0px !important;
     height: 300px;
+    margin-left: -15px !important;
 }
 
 .form-control {
@@ -425,6 +438,7 @@ footer h2{
 .abogado{
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 10px;
 }
 
 
@@ -442,4 +456,52 @@ footer h2{
     padding-top: 2px;
     padding-bottom: 2px;
     text-align: center !important;
+    transition: all .5s ease !important;
+}
+
+.abogado_contenedor_contacto{
+    background-color: #fff; 
+    padding-bottom: 5px; 
+    padding-top: 15px;
+    transition: all .5s ease !important;
+}
+
+.abogado:hover > .gray{
+    background-color: #bf9e58;
+}
+
+.abogado_nombre{
+    height: 30px;
+}
+
+.abogado:hover .abogado_nombre{
+    color: #fff !important;
+}
+
+.abogado:hover .abogado_areas_detalle{
+    color: #fff !important;
+}
+
+.abogado:hover .abogado_contenedor_contacto{
+    background-color: #3b3946;
+}
+
+.abogado:hover .abogado_contacto{
+    color: #fff !important;
+}
+
+.button-gold-ver-mas{
+    background: #b89b5e none repeat scroll 0 0 !important;
+    border-color: #b89b5e;
+    border-radius: 0px !important;
+    color: #ffffff;
+    font-family: "Raleway",sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.3s ease;
 }

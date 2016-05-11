@@ -1,3 +1,8 @@
+<?php
+    use yii\helpers\Url;
+    use common\widgets\Alert;
+?>
+
 <?php // <editor-fold defaultstate="collapsed" desc="Slider"> ?>
 <header id="header">
     <div id="myCarousel" class="carousel slide">
@@ -23,9 +28,9 @@
                     <h1 class="sub-title-slide">Estudio Jurídico Financiero</h1>
                     
                     <div class="" style="margin-top: 20px;">
-                        <a href="../" class="btn btn-transparent light">
-                            Nuestros Servicios | 
-                            <span class="glyphicon glyphicon-arrow-right" style="top: 2px;"></span>
+                        <a href="#areas" class="btn btn-transparent light">
+                            Nuestros Servicios <br/> 
+                            <span class="glyphicon glyphicon-menu-down" style=""></span>
                         </a>
                     </div>    
                     
@@ -43,6 +48,13 @@
                 <div class="carousel-caption">
                     <h1 class="title-slide dorado"><strong class="bold-text">ASISCOM</strong> CHILE</h1>
                     <h1 class="sub-title-slide">Estudio jurídico financiero</h1>
+                    
+                    <div class="" style="margin-top: 20px;">
+                        <a href="#areas" class="btn btn-transparent light">
+                            Nuestros Servicios <br/> 
+                            <span class="glyphicon glyphicon-menu-down" style=""></span>
+                        </a>
+                    </div>  
                 </div>
                 <div class="overlay"></div>
             </div>
@@ -73,7 +85,7 @@
                     <p>
                         <?= $nuestro_estudio->dato ?>
                     </p>
-                    <p style="text-align: right;"><a href="#">leer más >></a></p>
+                    <p style="text-align: right;"><a href="<?= Url::to(['site/about',]); ?>">leer más >></a></p>
                 </div>
                 <div class="col-lg-1 hidden-md hidden-sm hidden-xs"></div>
                 <a href="#" title="ver equipo de trabajo" ><image src="<?php Yii::$app->homeUrl?>/images/mantenible/team2.jpg"  class="col-lg-5 col-md-4 col-sm-4 img-responsive thumbnail"/></a>
@@ -95,20 +107,21 @@
             foreach ($servicios as $servicio){
         ?>
             <div class="col-lg-4 col-md-4 col-sm-12 servicio">
-                <a href="#">
+                <a href="<?= Url::to(['site/areas',]); ?>">
                     <p>
-                    <span style="height: 100px; float: left; margin-right: 10px;">
-                        <image src="<?php Yii::$app->homeUrl?>/images/iconos/<?= $servicio->image ?>" style=""/>
-                    </span>
-                    <b><?= $servicio->nombre ?></b><br/>
-                    <?= $servicio->resumen ?>
-                </p>
-                
+                        <span style="height: 100px; float: left; margin-right: 10px;">
+                            <image src="<?php Yii::$app->homeUrl?>/images/iconos/<?= $servicio->image ?>" style=""/>
+                        </span>
+                        <b><?= $servicio->nombre ?></b><br/>
+                        <?= $servicio->resumen ?>
+                    </p>
                 </a>
             </div>
         <?php
             }
         ?>
+        
+        <p style="text-align: right;"><a class="link" href="<?= Url::to(['site/areas',]); ?>">leer más >></a></p>
     </div>
 </div>
 <?php // </editor-fold> ?>
@@ -183,6 +196,8 @@
                 'model' => $model,
             ]);
         ?>
+        
+        <?= Alert::widget(); ?>
     </div>
     <div class="col-lg-2"></div>
 </div>

@@ -18,7 +18,11 @@
         "yiisoft/yii2": ">=2.0.6",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "^2.0",
-        "vova07/yii2-imperavi-widget": "*"
+        "vova07/yii2-imperavi-widget": "*",
+        "bupy7/yii2-widget-cropbox": "*",
+        "karpoff/yii2-crop-image-upload": "*",
+        "raoul2000/yii2-jcrop-widget": "*",
+        "cozumel/yii2-image-cropper": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

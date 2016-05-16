@@ -24,7 +24,7 @@
                             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 abogado">
                                 <div class="gray" style="padding-bottom: 5px;">
                                     <image class="img-responsive" style="width: 100%;"
-                                           src="<?php Yii::$app->homeUrl?>/images/abogados/<?= $abogado->idabogado ?>.jpg" />
+                                           src="<?= $abogado->urlImagen(); ?>" />
                                     <div style="margin-top: 20px;">
                                         <h4 class="abogado_nombre"><?= $abogado->nombres." ".$abogado->apellidos ?></h4>
                                         <br/>

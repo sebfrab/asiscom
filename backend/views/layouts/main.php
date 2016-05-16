@@ -28,7 +28,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'ASISCOM',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -40,6 +40,14 @@ AppAsset::register($this);
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $menuItems[] = ['label' => '<span class="glyphicon glyphicon-cog"></span> Ajustes',
+                'items' => [
+                    ['label' => 'Generales', 'url' => ['/general']],
+                    ['label' => 'Abogados', 'url' => ['/abogado']],
+                    ['label' => 'Testimonios', 'url' => ['/testimonio']],
+                    ['label' => 'Clientes', 'url' => ['/cliente']],
+                ]
+            ];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
@@ -51,6 +59,7 @@ AppAsset::register($this);
     }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
+        'encodeLabels' => false,
         'items' => $menuItems,
     ]);
     NavBar::end();

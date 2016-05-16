@@ -98,7 +98,6 @@ AppAsset::register($this);
                 <div class="col-lg-12">
                     <a target="_blank" href="https://www.facebook.com/asiscom.ltda" id="facebook"><image src="<?php Yii::$app->homeUrl?>/images/facebook.png" /></a>
                 </div>
-                
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
@@ -130,6 +129,19 @@ AppAsset::register($this);
                 http://asiscomchilelimitada.blogspot.cl/
             </p>
             
+        </div>
+    </div>
+    <div class="container-fluid" id="sefb">
+        <div id="row">
+            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-3">                        
+            </div>
+            <div id="author" class="col-lg-3 col-md-3 col-sm-4 col-xs-9">
+            <a href="http://sefb.cl" target="_blank" title="&#191; y por qu&eacute; no &#63; / seb.frab@gmail.com">
+                <p>
+                    ¿y por qué no? 
+                    <b>Sebasti&aacute;n Franco</b>
+                </p>
+            </a>
         </div>
     </div>
 </footer>

@@ -137,7 +137,7 @@
         <?php
             if(!is_null($testimonio)){
         ?>
-        <p><image src="<?php Yii::$app->homeUrl?>/images/testimonio/<?= $testimonio->idtestimonio ?>.jpg" class="img-circle"/></p>
+        <p><image src="<?= $testimonio->urlImagen(); ?>" class="img-circle"/></p>
         <p>
             " <?= $testimonio->testimonio ?> " <br/>
             
